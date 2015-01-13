@@ -24,7 +24,7 @@ RUN a2enmod rewrite
 
 # Configure /app folder with sample app
 RUN mkdir -p /app
-RUN git clone https://github.com/agix/web-hacking-level-1-exos /app
+RUN git clone https://github.com/scrtexos/web-hacking-level-1-exos /app
 RUN rm -rf /app/content/.git
 RUN rm -rf /var/www/html && ln -s /app /var/www/html
 RUN find /app/ -name db -exec chown -R www-data:www-data {} \;
